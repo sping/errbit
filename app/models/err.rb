@@ -12,7 +12,7 @@ class Err
   index fingerprint: 1
 
   belongs_to :problem
-  has_many :notices, inverse_of: :err, dependent: :destroy
+  has_many :notices, inverse_of: :err, dependent: :delete
 
   validates :problem_id, :fingerprint, presence: true
 
